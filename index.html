@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projcet01</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
 </head>
 <body>
     <section class="header">
@@ -13,7 +14,9 @@
         <nav>
             <a href="index.html"> <img src="eduford_img/logo.png" alt=""></a>
 
-            <div class="nav-link">
+            <div class="nav-link" id="navLink">
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
@@ -22,14 +25,29 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="openMenu()"></i>
+
         </nav>
 
         <div class="text-box">
-            <h1>World Bigest University</h1>
+            <h1>World's Biggest University</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum unde sit dolorem perferendis aspernatur vero.</p>
-            <button>SHOW MORE</button>
+            <button class="hero-btn">SHOW MORE</button>
         </div>
 
     </section>
+
+
+    <script>
+        let navLink = document.getElementById('navLink');
+
+        function hideMenu(){
+            navLink.style.right= "-200px";
+        };
+
+        function openMenu(){
+            navLink.style.right="0";
+        }
+    </script>
 </body>
 </html>
